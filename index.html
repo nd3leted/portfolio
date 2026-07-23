@@ -10,7 +10,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Outfit:wght@400;500;600;700&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Zen+Old+Mincho:wght@400;500;600;700&family=Noto+Serif+JP:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
@@ -43,6 +43,63 @@
     <section class="hero" id="hero">
         <div class="hero-bg">
             <div class="hero-grid-overlay"></div>
+            <!-- World Map Watermark Overlay -->
+            <div class="watermark-world-map">
+                <svg viewBox="0 0 1000 500" preserveAspectRatio="xMidYMid slice" fill="currentColor">
+                    <!-- World Map Dotted / Contour Vector Watermark -->
+                    <g class="map-continents">
+                        <!-- North America -->
+                        <path d="M150,120 Q180,100 240,110 T280,160 T250,220 T180,240 T140,180 Z" opacity="0.4"/>
+                        <!-- South America -->
+                        <path d="M260,260 Q300,270 320,330 T280,420 T240,380 T240,300 Z" opacity="0.4"/>
+                        <!-- Europe -->
+                        <path d="M480,90 Q540,80 570,120 T520,170 T460,140 Z" opacity="0.4"/>
+                        <!-- Africa -->
+                        <path d="M460,180 Q540,180 580,240 T540,350 T480,320 T440,240 Z" opacity="0.4"/>
+                        <!-- Asia & Japan -->
+                        <path d="M580,80 Q720,60 820,110 T850,220 T740,240 T620,180 Z" opacity="0.4"/>
+                        <!-- Japan Archipelago Highlight -->
+                        <path d="M840,130 Q855,120 860,140 T850,165 Z" class="map-japan-highlight"/>
+                        <!-- Australia -->
+                        <path d="M760,320 Q840,310 860,370 T780,410 T740,360 Z" opacity="0.4"/>
+                    </g>
+                    <!-- Global Cross-Border Institutional Connection Lines -->
+                    <g class="map-routes" stroke="currentColor" stroke-width="1.5" stroke-dasharray="6 6" fill="none">
+                        <!-- Tokyo to London/Europe -->
+                        <path d="M850,140 Q680,40 500,110" />
+                        <!-- Tokyo to New York/US -->
+                        <path d="M850,140 Q500,-20 220,140" />
+                        <!-- Tokyo to Singapore/SE Asia -->
+                        <path d="M850,140 Q800,220 720,260" />
+                        <!-- Tokyo to Hong Kong/Greater China -->
+                        <path d="M850,140 Q800,170 760,180" />
+                    </g>
+                    <!-- Connection Hub Nodes -->
+                    <g class="map-nodes">
+                        <circle cx="850" cy="140" r="6" class="hub-tokyo"/>
+                        <circle cx="760" cy="180" r="4" class="hub-node"/>
+                        <circle cx="720" cy="260" r="4" class="hub-node"/>
+                        <circle cx="500" cy="110" r="4" class="hub-node"/>
+                        <circle cx="220" cy="140" r="4" class="hub-node"/>
+                    </g>
+                </svg>
+            </div>
+            <!-- Digital Currency & Network Nodes Watermark -->
+            <div class="watermark-crypto-nodes">
+                <svg viewBox="0 0 800 800" fill="none" stroke="currentColor">
+                    <!-- Blockchain Node Grid & Currency Glyphs -->
+                    <g stroke-width="1" opacity="0.3">
+                        <polygon points="400,100 480,150 480,250 400,300 320,250 320,150" />
+                        <polygon points="600,300 680,350 680,450 600,500 520,450 520,350" />
+                        <polygon points="200,350 280,400 280,500 200,550 120,500 120,400" />
+                        <line x1="400" y1="300" x2="520" y2="350" />
+                        <line x1="320" y1="250" x2="280" y2="400" />
+                        <circle cx="400" cy="200" r="24" stroke-width="1.5"/>
+                        <!-- Digital Currency Symbol inside node -->
+                        <path d="M394,188 h14 a7,7 0 0,1 0,14 h-14 v-14 M394,202 h16 a7,7 0 0,1 0,14 h-16 v-14 M398,182 v36" stroke-width="1.5" />
+                    </g>
+                </svg>
+            </div>
             <div class="hero-glow glow-1"></div>
             <div class="hero-glow glow-2"></div>
         </div>
@@ -64,7 +121,7 @@
                             <path d="M3.6 9h16.8M3.6 15h16.8"></path>
                             <path d="M11.5 3a17 17 0 0 0 0 18M12.5 3a17 17 0 0 1 0 18"></path>
                         </svg>
-                        <span>Trilingual: Cantonese (Native), Mandarin, Japanese (JLPT N1), English (IELTS 8.0)</span>
+                        <span>Trilingual: Cantonese, Mandarin, Japanese, English</span>
                     </div>
                     <p class="narrative-text">
                         Hong Kong roots as an East Asia asset, based in Tokyo. Connecting Japan, Greater China, and Southeast Asia with Western institutional markets, bridging enterprises with startups, and pairing institutional capital with builders.
@@ -87,6 +144,7 @@
 
     <!-- Track Record Section -->
     <section class="section track-record" id="track-record">
+        <div class="watermark-bg-grid"></div>
         <div class="container">
             <div class="section-header">
                 <span class="section-tag">Institutional Proof</span>
@@ -98,7 +156,7 @@
             <div class="metrics-grid">
                 <div class="metric-card glass-card">
                     <div class="metric-header">
-                        <span class="metric-number" data-count="43">0</span>
+                        <span class="metric-number" data-count="40">0</span>
                         <span class="metric-plus">+</span>
                     </div>
                     <div class="metric-title">Closed Deals</div>
@@ -113,7 +171,8 @@
                 </div>
                 <div class="metric-card glass-card">
                     <div class="metric-header">
-                        <span class="metric-number" data-count="1217" data-format="comma">0</span>
+                        <span class="metric-number" data-count="1200" data-format="comma">0</span>
+                        <span class="metric-plus">+</span>
                     </div>
                     <div class="metric-title">Summit Registrations</div>
                     <p class="metric-desc">Blockchain Summit Tokyo 2026 registrations. Built the event business into a standalone P&L.</p>
